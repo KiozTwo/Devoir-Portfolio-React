@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f7fb;
+    color: #111827;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 0 18px 0;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* ================= GRID ================= */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* ================= CARTES ================= */
+
+.recipe-card,
+.comment-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.recipe-card {
+    min-height: 720px;
+}
+
+.recipe-card h2,
+.comment-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.recipe-text {
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+/* ================= RECETTE ================= */
+
+.recipe-box {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.recipe-box h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.recipe-box ul,
+.recipe-box ol {
+    margin-left: 22px;
+    margin-bottom: 18px;
+}
+
+.recipe-box li {
+    margin-bottom: 6px;
+}
+
+/* ================= FORMULAIRE ================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+}
+
+.info-text {
+    color: #6b7280;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.publish-btn {
+    background: #2563eb;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 12px 14px;
+    margin-top: 18px;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.publish-btn:hover {
+    opacity: 0.95;
+}
+
+/* ================= ERREUR ================= */
+
+#errorMessage {
+    display: none;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    padding: 12px;
+    margin-top: 12px;
+
+    border-radius: 12px;
+}
+
+/* ================= COMMENTAIRES ================= */
+
+.comments-title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.comment-item {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    color: #374151;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+
+    color: #dc2626;
+
+    padding: 6px 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: #fff5f5;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 18px;
+    text-align: center;
+    color: #6b7280;
+    padding: 14px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card {
+        order: 1;
+        min-height: auto;
+    }
+
+    .comment-card {
+        order: 2;
+    }
+}
